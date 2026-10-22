@@ -1,8 +1,8 @@
-# 🌾 Smart AgroConnect
+# 🌾 Terra Connect
 
 <div align="center">
 
-![Smart AgroConnect](https://img.shields.io/badge/Smart-AgroConnect-purple?style=for-the-badge)
+![Terra Connect](https://img.shields.io/badge/Terra-Connect-purple?style=for-the-badge)
 ![MERN Stack](https://img.shields.io/badge/MERN-Stack-green?style=for-the-badge)
 ![AI Powered](https://img.shields.io/badge/AI-Powered-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
@@ -17,7 +17,7 @@
 
 ## 📋 Overview
 
-Smart AgroConnect is a full-stack agricultural platform designed to bridge the gap between traditional farming and modern technology. It provides Indian farmers with essential tools for better decision-making, market access, and community engagement, with bilingual support in English and Kannada.
+Terra Connect is a full-stack agricultural platform designed to bridge the gap between traditional farming and modern technology. It provides Indian farmers with essential tools for better decision-making, market access, and community engagement, with bilingual support in English and Kannada.
 
 ## ✨ Features
 
