@@ -67,7 +67,7 @@ const PestDetection = () => {
         {/* ================= HEADER ================= */}
         <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
           <FaBug />
-          {t("Mushroom Disease Detection (AI)")}
+          {t("Disease Detection in Pest detection CNN module")}
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8">

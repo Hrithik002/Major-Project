@@ -2,7 +2,7 @@
 
 ## ✅ Migration Complete!
 
-The Smart AgroConnect application has been successfully migrated from Google's Gemini API to Groq's API using the `llama-3.1-8b-instant` model.
+The Terra Connect application has been successfully migrated from Google's Gemini API to Groq's API using the `llama-3.1-8b-instant` model.
 
 ---
 

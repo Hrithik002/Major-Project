@@ -23,3 +23,19 @@ export const isTokenValid = () => {
     return false;
   }
 };
+
+export const getUserRole = () => {
+  try {
+    const token = localStorage.getItem("token");
+    if (!token) return null;
+
+    const [, payload] = token.split(".");
+    if (!payload) throw new Error("Invalid token");
+
+    const normalizedPayload = payload.replace(/-/g, "+").replace(/_/g, "/");
+    const decoded = JSON.parse(atob(normalizedPayload));
+    return decoded?.role || null;
+  } catch (error) {
+    return null;
+  }
+};

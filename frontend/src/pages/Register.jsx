@@ -103,9 +103,20 @@ const Register = () => {
 
       if (response.data.success) {
         toast.success(
-          response.data.message || "Registration successful! Please login."
+          response.data.message || "Registration successful!"
         );
-        navigate("/login");
+        
+        // Redirect based on role
+        if (formData.role === "admin") {
+          // Store token and user for auto-login if provided
+          if (response.data.token) {
+            localStorage.setItem("token", response.data.token);
+            localStorage.setItem("user", JSON.stringify(response.data.user));
+          }
+          navigate("/admin/dashboard", { replace: true });
+        } else {
+          navigate("/login");
+        }
       }
     } catch (error) {
       const errorMessage =
@@ -133,7 +144,7 @@ const Register = () => {
             </div>
           </div>
           <h2 className="text-4xl font-extrabold text-gradient mb-2">
-            Smart AgroConnect
+            Terra Connect
           </h2>
           <p className="text-text-secondary text-lg">
             Join our farming community today
@@ -236,11 +247,12 @@ const Register = () => {
                   name="role"
                   value={formData.role}
                   onChange={handleChange}
-                  className="block w-full pl-10 pr-3 py-3 glass-input rounded-card"
+                  className="block w-full pl-10 pr-3 py-3 glass-input rounded-card text-slate-900"
                 >
-                  <option value="farmer">Farmer</option>
-                  <option value="buyer">Buyer</option>
-                  <option value="expert">Agricultural Expert</option>
+                  <option value="farmer" className="text-slate-900">Farmer</option>
+                  <option value="buyer" className="text-slate-900">Buyer</option>
+                  <option value="expert" className="text-slate-900">Agricultural Expert</option>
+                  <option value="admin" className="text-slate-900">Admin</option>
                 </select>
               </div>
             </div>

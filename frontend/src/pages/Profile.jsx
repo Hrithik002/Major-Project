@@ -273,7 +273,7 @@ const Profile = () => {
             {t("My Profile")}
           </h1>
           <p className="text-text-secondary mt-1">
-            {t("View your Smart AgroConnect account information")}
+            {t("View your Terra Connect account information")}
           </p>
         </div>
         {renderBody()}

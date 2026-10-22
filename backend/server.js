@@ -139,6 +139,7 @@ app.use("/api/forum", require("./routes/forumRoutes"));
 app.use("/api/chatbot", require("./routes/chatbotRoutes"));
 app.use("/api/translations", require("./routes/translationRoutes"));
 app.use("/api/knowledge-hub", require("./routes/knowledgeHubRoutes"));
+app.use("/api/admin", require("./routes/adminRoutes"));
 
 // ==========================
 // 🔥 PEST DETECTION (NODE → PYTHON)

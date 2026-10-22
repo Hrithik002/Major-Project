@@ -171,13 +171,13 @@ const translations = {
   Contact: "ಸಂಪರ್ಕ",
 
   // Dashboard Page
-  "Welcome to Smart AgroConnect": "ಸ್ಮಾರ್ಟ್ ಅಗ್ರೋಕನೆಕ್ಟ್‌ಗೆ ಸ್ವಾಗತ",
+  "Welcome to Terra Connect": "ಟೆರಾ ಕನೆಕ್ಟ್‌ಗೆ ಸ್ವಾಗತ",
   "Your complete agricultural advisory and marketplace platform":
     "ನಿಮ್ಮ ಸಂಪೂರ್ಣ ಕೃಷಿ ಸಲಹಾ ಮತ್ತು ಮಾರುಕಟ್ಟೆ ವೇದಿಕೆ",
   "Our Key Smart Features": "ನಮ್ಮ ಪ್ರಮುಖ ಸ್ಮಾರ್ಟ್ ವೈಶಿಷ್ಟ್ಯಗಳು",
   "Our Platform Services": "ನಮ್ಮ ವೇದಿಕೆ ಸೇವೆಗಳು",
-  "These below are the primary services offered by Smart AgroConnect":
-    "ಸ್ಮಾರ್ಟ್ ಅಗ್ರೋಕನೆಕ್ಟ್ ನೀಡುವ ಪ್ರಾಥಮಿಕ ಸೇವೆಗಳು ಇವು",
+  "These below are the primary services offered by Terra Connect":
+    "ಟೆರಾ ಕನೆಕ್ಟ್ ನೀಡುವ ಪ್ರಾಥಮಿಕ ಸೇವೆಗಳು ಇವು",
 
   // Feature Names
   "Smart Recommendations": "ಸ್ಮಾರ್ಟ್ ಶಿಫಾರಸುಗಳು",
@@ -300,8 +300,8 @@ const translations = {
 
   // Profile Page
   "My Profile": "ನನ್ನ ಪ್ರೊಫೈಲ್",
-  "View your Smart AgroConnect account information":
-    "ನಿಮ್ಮ Smart AgroConnect ಖಾತೆ ಮಾಹಿತಿಯನ್ನು ವೀಕ್ಷಿಸಿ",
+  "View your Terra Connect account information":
+    "ನಿಮ್ಮ ಟೆರಾ ಕನೆಕ್ಟ್ ಖಾತೆ ಮಾಹಿತಿಯನ್ನು ವೀಕ್ಷಿಸಿ",
   ACCOUNT: "ಖಾತೆ",
   "FULL NAME": "ಪೂರ್ಣ ಹೆಸರು",
   EMAIL: "ಇಮೇಲ್",
@@ -363,7 +363,7 @@ const translations = {
   Unknown: "ಅಜ್ಞಾತ",
 
   // Pest Detection Page
-  "Mushroom Disease Detection (AI)": "ಅಣಬೆ ರೋಗ ಪತ್ತೆ (AI)",
+  "Disease Detection in Pest detection CNN module": "ಅಣಬೆ ರೋಗ ಪತ್ತೆ (AI)",
   "Upload Mushroom Image": "ಅಣಬೆ ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
   "Click to upload image": "ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಲು ಕ್ಲಿಕ್ ಮಾಡಿ",
   "PNG / JPG only": "PNG / JPG ಮಾತ್ರ",
@@ -389,8 +389,8 @@ const translations = {
   // Profile Page
   ACCOUNT: "ಖಾತೆ",
   "My Profile": "ನನ್ನ ಪ್ರೊಫೈಲ್",
-  "View your Smart AgroConnect account information.":
-    "ನಿಮ್ಮ ಸ್ಮಾರ್ಟ್ ಅಗ್ರೋಕನೆಕ್ಟ್ ಖಾತೆ ಮಾಹಿತಿಯನ್ನು ವೀಕ್ಷಿಸಿ.",
+  "View your Terra Connect account information.":
+    "ನಿಮ್ಮ ಟೆರಾ ಕನೆಕ್ಟ್ ಖಾತೆ ಮಾಹಿತಿಯನ್ನು ವೀಕ್ಷಿಸಿ.",
   "Your account details": "ನಿಮ್ಮ ಖಾತೆ ವಿವರಗಳು",
   "FULL NAME": "ಪೂರ್ಣ ಹೆಸರು",
   EMAIL: "ಇಮೇಲ್",
@@ -453,8 +453,8 @@ const translations = {
   "Full walkthrough on maize prep, sowing, irrigation, fertilization, and harvest timing.":
     "ಜೋಳ ಸಿದ್ಧತೆ,撒ಣೆ, ನೀರಾವರಿ, ಸಾರಜನಕೀಕರಣ ಮತ್ತು ಸುಗ್ರಾಹ್ಯ ಸಮಯದ ಮೇಲೆ ಸಂಪೂರ್ಣ ವಾಕ್‌ಥ್ರೂ.",
 
-  // Smart AgroConnect Logo
-  "Smart AgroConnect": "ಸ್ಮಾರ್ಟ್ ಅಗ್ರೋಕನೆಕ್ಟ್",
+  // Terra Connect Logo
+  "Terra Connect": "ಟೆರಾ ಕನೆಕ್ಟ್",
 
   // Additional translations for Knowledge Hub
   "Crop Protection": "ಬೆಳೆ ಸಂರಕ್ಷಣೆ",
@@ -551,8 +551,8 @@ const translations = {
   // Marketplace Page Translations
   "Shop trusted agri inputs and produce":
     "ವಿಶ್ವಾಸಾರ್ಹ ಕೃಷಿ ಉತ್ಪನ್ನಗಳು ಮತ್ತು ಉತ್ಪಾದನೆಗಳನ್ನು ಖರೀದಿಸಿ",
-  "Compare certified inputs, contact verified sellers, and order with delivery clarity—without leaving Smart AgroConnect.":
-    "ಪ್ರಮಾಣೀಕೃತ ಉತ್ಪನ್ನಗಳನ್ನು ಹೋಲಿಸಿ, ಪರಿಶೀಲಿತ ಮಾರಾಟಗಾರರನ್ನು ಸಂಪರ್ಕಿಸಿ ಮತ್ತು ವಿತರಣಾ ಸ್ಪಷ್ಟತೆಯೊಂದಿಗೆ ಆದೇಶಿಸಿ—ಸ್ಮಾರ್ಟ್ ಅಗ್ರೋಕನೆಕ್ಟ್ ಬಿಡದೆ.",
+  "Compare certified inputs, contact verified sellers, and order with delivery clarity—without leaving Terra Connect.":
+    "ಪ್ರಮಾಣೀಕೃತ ಉತ್ಪನ್ನಗಳನ್ನು ಹೋಲಿಸಿ, ಪರಿಶೀಲಿತ ಮಾರಾಟಗಾರರನ್ನು ಸಂಪರ್ಕಿಸಿ ಮತ್ತು ವಿತರಣಾ ಸ್ಪಷ್ಟತೆಯೊಂದಿಗೆ ಆದೇಶಿಸಿ—ಟೆರಾ ಕನೆಕ್ಟ್ ಬಿಡದೆ.",
   Trust: "ವಿಶ್ವಾಸ",
   "Verified sellers, badges, and reviews":
     "ಪರಿಶೀಲಿತ ಮಾರಾಟಗಾರರು, ಬ್ಯಾಡ್ಜ್‌ಗಳು ಮತ್ತು ಪರಿಶೀಲನೆಗಳು",

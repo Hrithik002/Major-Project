@@ -6,8 +6,11 @@ import {
   Navigate,
 } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute";
+import AdminProtectedRoute from "./components/AdminProtectedRoute";
 import AuthLayout from "./layouts/AuthLayout";
+import AppLayout from "./layouts/AppLayout";
 import Dashboard from "./pages/Dashboard";
+import AdminDashboard from "./pages/AdminDashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Weather from "./pages/Weather";
@@ -16,28 +19,59 @@ import Chatbot from "./pages/Chatbot";
 import MarketPrices from "./pages/MarketPrices";
 import GovernmentSchemes from "./pages/GovernmentSchemes";
 import Marketplace from "./pages/Marketplace";
+import BuyerPage from "./pages/BuyerPage";
 import Forum from "./pages/Forum";
 import KnowledgeHub from "./pages/KnowledgeHub";
 import Profile from "./pages/Profile";
 import FertilizerAlerts from "./pages/FertilizerAlerts";
 import { Toaster } from "react-hot-toast";
-import { isTokenValid } from "./utils/auth";
+import { getUserRole, isTokenValid } from "./utils/auth";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import { CartProvider } from "./contexts/CartContext";
 
 function App() {
   const isAuthenticated = () => isTokenValid();
+  const getDefaultRoute = () => {
+    const role = getUserRole();
+    if (role === "admin") return "/admin/dashboard";
+    if (role === "buyer") return "/buyer";
+    return "/dashboard";
+  };
 
   return (
     <LanguageProvider>
-      <Router>
-        <Toaster position="top-right" />
-        <Routes>
+      <CartProvider>
+        <Router>
+          <Toaster
+            position="bottom-right"
+            toastOptions={{
+              style: {
+                background: "var(--app-surface-strong)",
+                color: "var(--app-text)",
+                border: "1px solid var(--app-border)",
+                boxShadow: "var(--app-shadow)",
+              },
+              success: {
+                iconTheme: {
+                  primary: "#0f766e",
+                  secondary: "#ffffff",
+                },
+              },
+              error: {
+                iconTheme: {
+                  primary: "#d66a52",
+                  secondary: "#ffffff",
+                },
+              },
+            }}
+          />
+          <Routes>
           {/* Public Routes - No Navbar */}
           <Route
             path="/login"
             element={
               isAuthenticated() ? (
-                <Navigate to="/dashboard" replace />
+                <Navigate to={getDefaultRoute()} replace />
               ) : (
                 <AuthLayout>
                   <Login />
@@ -49,7 +83,7 @@ function App() {
             path="/register"
             element={
               isAuthenticated() ? (
-                <Navigate to="/dashboard" replace />
+                <Navigate to={getDefaultRoute()} replace />
               ) : (
                 <AuthLayout>
                   <Register />
@@ -63,7 +97,9 @@ function App() {
             path="/dashboard"
             element={
               <ProtectedRoute>
-                <Dashboard />
+                <AppLayout>
+                  <Dashboard />
+                </AppLayout>
               </ProtectedRoute>
             }
           />
@@ -71,7 +107,9 @@ function App() {
             path="/profile"
             element={
               <ProtectedRoute>
-                <Profile />
+                <AppLayout>
+                  <Profile />
+                </AppLayout>
               </ProtectedRoute>
             }
           />
@@ -79,7 +117,9 @@ function App() {
             path="/weather"
             element={
               <ProtectedRoute>
-                <Weather />
+                <AppLayout>
+                  <Weather />
+                </AppLayout>
               </ProtectedRoute>
             }
           />
@@ -87,7 +127,9 @@ function App() {
             path="/market-prices"
             element={
               <ProtectedRoute>
-                <MarketPrices />
+                <AppLayout>
+                  <MarketPrices />
+                </AppLayout>
               </ProtectedRoute>
             }
           />
@@ -95,7 +137,9 @@ function App() {
             path="/schemes"
             element={
               <ProtectedRoute>
-                <GovernmentSchemes />
+                <AppLayout>
+                  <GovernmentSchemes />
+                </AppLayout>
               </ProtectedRoute>
             }
           />
@@ -103,7 +147,19 @@ function App() {
             path="/marketplace"
             element={
               <ProtectedRoute>
-                <Marketplace />
+                <AppLayout>
+                  <Marketplace />
+                </AppLayout>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/buyer"
+            element={
+              <ProtectedRoute>
+                <AppLayout>
+                  <BuyerPage />
+                </AppLayout>
               </ProtectedRoute>
             }
           />
@@ -111,7 +167,9 @@ function App() {
             path="/forum"
             element={
               <ProtectedRoute>
-                <Forum />
+                <AppLayout>
+                  <Forum />
+                </AppLayout>
               </ProtectedRoute>
             }
           />
@@ -119,7 +177,9 @@ function App() {
             path="/knowledge-hub"
             element={
               <ProtectedRoute>
-                <KnowledgeHub />
+                <AppLayout>
+                  <KnowledgeHub />
+                </AppLayout>
               </ProtectedRoute>
             }
           />
@@ -127,7 +187,9 @@ function App() {
             path="/pest-detection"
             element={
               <ProtectedRoute>
-                <PestDetection />
+                <AppLayout>
+                  <PestDetection />
+                </AppLayout>
               </ProtectedRoute>
             }
           />
@@ -135,7 +197,9 @@ function App() {
             path="/fertilizer-alerts"
             element={
               <ProtectedRoute>
-                <FertilizerAlerts />
+                <AppLayout>
+                  <FertilizerAlerts />
+                </AppLayout>
               </ProtectedRoute>
             }
           />
@@ -143,8 +207,20 @@ function App() {
             path="/chatbot"
             element={
               <ProtectedRoute>
-                <Chatbot />
+                <AppLayout>
+                  <Chatbot />
+                </AppLayout>
               </ProtectedRoute>
+            }
+          />
+
+          {/* Admin Routes - No App Layout */}
+          <Route
+            path="/admin/dashboard"
+            element={
+              <AdminProtectedRoute>
+                <AdminDashboard />
+              </AdminProtectedRoute>
             }
           />
 
@@ -153,7 +229,7 @@ function App() {
             path="/"
             element={
               <Navigate
-                to={isAuthenticated() ? "/dashboard" : "/login"}
+                to={isAuthenticated() ? getDefaultRoute() : "/login"}
                 replace
               />
             }
@@ -164,13 +240,14 @@ function App() {
             path="*"
             element={
               <Navigate
-                to={isAuthenticated() ? "/dashboard" : "/login"}
+                to={isAuthenticated() ? getDefaultRoute() : "/login"}
                 replace
               />
             }
           />
-        </Routes>
-      </Router>
+          </Routes>
+        </Router>
+      </CartProvider>
     </LanguageProvider>
   );
 }

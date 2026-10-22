@@ -313,7 +313,7 @@ const Marketplace = () => {
             </h1>
             <p className="text-gray-300 mt-1 max-w-2xl">
               {t(
-                "Compare certified inputs, contact verified sellers, and order with delivery clarity—without leaving Smart AgroConnect."
+                "Compare certified inputs, contact verified sellers, and order with delivery clarity—without leaving Terra Connect."
               )}
             </p>
           </div>

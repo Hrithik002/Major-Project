@@ -2,7 +2,7 @@
 
 ## Changes Made
 
-This document outlines the migration from Google's Gemini API to Groq's API for the Smart AgroConnect chatbot service.
+This document outlines the migration from Google's Gemini API to Groq's API for the Terra Connect chatbot service.
 
 ### What Changed
 

@@ -92,7 +92,7 @@ const register = async (req, res) => {
 
     res.status(201).json({
       success: true,
-      message: "Registration successful! Welcome to Smart AgroConnect.",
+      message: "Registration successful! Welcome to Terra Connect.",
       token,
       user: {
         id: user._id,

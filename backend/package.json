@@ -1,7 +1,7 @@
 {
   "name": "smart-agroconnect-server",
   "version": "1.0.0",
-  "description": "Smart AgroConnect - Agricultural Advisory Platform",
+  "description": "Terra Connect - Agricultural Advisory Platform",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
